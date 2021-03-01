@@ -70,6 +70,8 @@
 	}
   }
   .rotating {
+	transform-origin: center center;
+	transform-style: preserve-3D;
 	-webkit-animation: rotating 8.5s linear infinite;
 	-moz-animation: rotating 8.5s linear infinite;
 	-ms-animation: rotating 8.5s linear infinite;

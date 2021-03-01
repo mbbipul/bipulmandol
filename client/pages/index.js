@@ -1,13 +1,13 @@
 import {  Box, Container } from '@material-ui/core';
 import Pendulum from '../components/pendulum';
-import TechCircle from '../components/tech_circle';
+import ProfileInfo from '../components/profile_info';
 import styles from '../static/home.module.css';
 const Home = () => {
 	const data = Array(4).fill("/images/javascript.png");
 	return (
 		<Box >
 		
-			<TechCircle style={{marginTop: -200}} />
+			<ProfileInfo style={{marginTop: -300,transform: 'scale(0.6)'}} />
 			<style jsx global>
 				{`
 					html,

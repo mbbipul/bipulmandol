@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
+import style from '../static/pendulum.module.css';
 
 const useStyles = props => makeStyles(theme => ({
 
@@ -69,7 +70,7 @@ const useStyles = props => makeStyles(theme => ({
 export default function Pendulum(props) {
   const classes = useStyles(props)();
   return (
-        <Box style={props.style} > 
+        <Box  style={props.style} > 
             <Box style={{paddingTop: 50}}>
                 <Box className={classes.block} />
             </Box>
