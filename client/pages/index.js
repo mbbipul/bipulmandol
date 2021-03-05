@@ -1,4 +1,5 @@
 import {  Box, Container } from '@material-ui/core';
+import HomeLeftbar from '../components/home_leftbar';
 import Pendulum from '../components/pendulum';
 import ProfileInfo from '../components/profile_info';
 import styles from '../static/home.module.css';
@@ -6,7 +7,7 @@ const Home = () => {
 	const data = Array(4).fill("/images/javascript.png");
 	return (
 		<Box >
-		
+			<HomeLeftbar />
 			<ProfileInfo style={{marginTop: -300,transform: 'scale(0.6)'}} />
 			<style jsx global>
 				{`
