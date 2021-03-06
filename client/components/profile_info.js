@@ -97,22 +97,22 @@ export default function ProfileInfo(props) {
            </Container>
            <Container >
                <Typography className={classes.profileInfo}>
-                <Typist >
-                    <h1>Hello World, My Name is Bipul Mandol</h1>
-                    <p>I have been working with web development since 2017, the
-                    period during which I have worked on different projects.</p> 
-                    <p>I have also worked in a Startup Company from 2019 to 2020 as a
-                    software and hardware engineer. </p>
-                    <p>I am a self-motivated and
-                    self-taught professional who likes to solve problems.</p>
-                    <p>I combine a desire for usability with a user experience with
-                    technical knowledge to create a great digital experience.</p>
-                    <p> My
-                    repertoire includes programming languages and tools such as
-                    .Net core,NodeJs, Flask, Java Android,ReactJS, </p><p>NextJs, MySQL, PostgreSQL, GraphQL, Nginx server
-                    configuration, Docker, Kubernetes, RestApi, MVC, and more.</p>
-                    </Typist>
-                    <Button variant='contained'className={classes.exploreButton}>View My Work</Button>
+                    <div >
+                        <h1>Hello World, My Name is Bipul Mandol</h1>
+                        <p>I have been working with web development since 2017, the
+                        period during which I have worked on different projects.</p> 
+                        <p>I have also worked in a Startup Company from 2019 to 2020 as a
+                        software and hardware engineer. </p>
+                        <p>I am a self-motivated and
+                        self-taught professional who likes to solve problems.</p>
+                        <p>I combine a desire for usability with a user experience with
+                        technical knowledge to create a great digital experience.</p>
+                        <p> My
+                        repertoire includes programming languages and tools such as
+                        .Net core,NodeJs, Flask, Java Android,ReactJS, </p><p>NextJs, MySQL, PostgreSQL, GraphQL, Nginx server
+                        configuration, Docker, Kubernetes, RestApi, MVC, and more.</p>
+                    </div>
+                    <Button variant='contained'className={classes.exploreButton}>Explore myself</Button>
 
                </Typography>
            </Container>
