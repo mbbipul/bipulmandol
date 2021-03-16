@@ -1,12 +1,13 @@
 import React from 'react';
 import {  Box, Button, Container, makeStyles, Typography } from '@material-ui/core';
 import Pendulum from './pendulum';
-import Typist from 'react-typist';
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import Link from 'next/link';
 
 const useStyles = makeStyles(theme => ({
     profileImage: {
         position: 'relative',
-        top: 100,
+        top: 70,
         left: 550,
         height: 170,
         width: 170,
@@ -52,6 +53,9 @@ const useStyles = makeStyles(theme => ({
 }));
 export default function ProfileInfo(props) {
     const classes = useStyles();
+    let theme = createMuiTheme();
+    theme = responsiveFontSizes(theme);
+
     let lines = [
         "Hello World, My Name is Bipul Mandol",
         "I have been working with web development since 2017, the period during which I have worked on different projects.",
@@ -112,7 +116,9 @@ export default function ProfileInfo(props) {
                         .Net core,NodeJs, Flask, Java Android,ReactJS, </p><p>NextJs, MySQL, PostgreSQL, GraphQL, Nginx server
                         configuration, Docker, Kubernetes, RestApi, MVC, and more.</p>
                     </div>
-                    <Button variant='contained'className={classes.exploreButton}>Explore myself</Button>
+                    <Link href="/explore">
+                        <Button variant='contained'className={classes.exploreButton}>Explore myself</Button>
+                    </Link>
 
                </Typography>
            </Container>

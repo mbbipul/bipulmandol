@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     root: {
         position: 'fixed',
         left: 0,
-        top: '30%',
+        top: '25%',
         width: 100,
         color: '#fff',
         display: 'block'

@@ -1,5 +1,6 @@
 import { AppBar, Button, makeStyles, Toolbar } from "@material-ui/core"
 import { navItem } from "../utils/app_navbar";
+import Link from 'next/link';
 
 const useStyles = makeStyles( theme => ({
     root: {
@@ -8,7 +9,7 @@ const useStyles = makeStyles( theme => ({
     },
     navButton: {
         background: 'rgba(255, 235, 59,1)',
-        padding: '10px 20px',
+        padding: '7px 20px',
         marginRight: 20,
         textAlign: 'center',
         textTransform: 'uppercase',
@@ -21,7 +22,9 @@ const useStyles = makeStyles( theme => ({
 
         '&:hover': {
            color:' #fff',
-           textDecoration: 'none'
+           textDecoration: 'none',
+           background: '#871EAE',
+   
         }
     }
 }));
@@ -30,13 +33,15 @@ export default function Navbar() {
     const classes = useStyles();
 
     return (
-        <AppBar position="static" style={{background: '#3F51B5',padding: 10}}>
+        <AppBar position="static" style={{background: '#3F51B5',padding: '5px 10px'}}>
             <Toolbar variant="dense">
             {
                 navItem.map( (item,i) => (
-                    <Button key ={i} className={classes.navButton} variant="contained" color='secondary'>
-                        {item.name}
-                    </Button>
+                    <Link href={item.link}>
+                        <Button key ={i} className={classes.navButton} variant="contained" >
+                            {item.name}
+                        </Button>
+                    </Link>
                 ))
             }
             </Toolbar>
