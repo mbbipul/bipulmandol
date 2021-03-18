@@ -116,7 +116,7 @@ export default function ProfileInfo(props) {
                         .Net core,NodeJs, Flask, Java Android,ReactJS, </p><p>NextJs, MySQL, PostgreSQL, GraphQL, Nginx server
                         configuration, Docker, Kubernetes, RestApi, MVC, and more.</p>
                     </div>
-                    <Link href="/explore">
+                    <Link href="/about">
                         <Button variant='contained'className={classes.exploreButton}>Explore myself</Button>
                     </Link>
 
