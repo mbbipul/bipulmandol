@@ -24,7 +24,9 @@ const useStyles = props => makeStyles(theme => ({
         zIndex: -9,
         '&:hover': {
             boxShadow: '0px 15px 25px -5px rgba(255, 255, 255, 0.897)',
-            transform: 'translateZ(7)'
+            transform: 'translateZ(7)',
+            transform: 'scale(2)',
+
         }
     },
     hookHolder: {
@@ -64,13 +66,14 @@ const useStyles = props => makeStyles(theme => ({
         border: "5px solid white",
         borderRadius : "50%"
     }
+
 }));
 
 
 export default function Pendulum(props) {
   const classes = useStyles(props)();
   return (
-        <Box  style={props.style} > 
+        <Box style={props.style} > 
             <Box style={{paddingTop: 50}}>
                 <Box className={classes.block} />
             </Box>
