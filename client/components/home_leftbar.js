@@ -3,7 +3,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import Head from 'next/head';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -42,10 +41,6 @@ export default function HomeLeftbar () {
 
     return (
         <div className={classes.root}>
-             <Head>
-                <title>Bipul Mandol || Software Engineer</title>
-                <meta name="viewport" content="width=1024" />
-            </Head>
             <List component="nav">
                 <ListItem >
                     <h6>Follow me</h6>

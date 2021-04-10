@@ -1,10 +1,15 @@
 import {  Box } from '@material-ui/core';
 import HomeLeftbar from '../components/home_leftbar';
 import ProfileInfo from '../components/profile_info';
+import Head from 'next/head';
 
 const Home = () => {
 	return (
 		<Box >
+		    <Head>
+                <title>Bipul Mandol || Software Engineer</title>
+                <meta name="viewport" content="width=1440" />
+            </Head>
 			<HomeLeftbar />
 			<ProfileInfo style={{marginTop: -330,transform: 'scale(0.5'}} />
 			<style jsx global>
