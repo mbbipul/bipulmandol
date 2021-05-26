@@ -1,26 +1,60 @@
-import {  Box } from '@material-ui/core';
-import HomeLeftbar from '../components/home_leftbar';
-import ProfileInfo from '../components/profile_info';
+import {  Box, Grid, makeStyles } from '@material-ui/core';
 import Head from 'next/head';
+import LeftNav from '../components/home/left_nav';
+import styles from '../static/home.module.css';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 
-const Home = () => {
+const useStyles = makeStyles((theme) => ({
+	root: {
+		width: '100%',
+		height: '100%'
+	},
+	left: {
+		borderRight: '1px solid hsla(0,0%,100%,.1)',
+		'border-right-width': 1,
+		'border-right-style': 'solid',
+		'border-right-color': 'rgba(255, 255, 255, 0.1)',
+	}
+}));
+
+const Home = (props) => {
+	const classes = useStyles();
+
 	return (
-		<Box >
+		<Box className={classes.root}>
 		    <Head>
                 <title>Bipul Mandol || Software Engineer</title>
-                <meta name="viewport" content="width=1440" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
             </Head>
-			<HomeLeftbar />
-			<ProfileInfo style={{marginTop: -330,transform: 'scale(0.5'}} />
+			<Grid
+				container
+				direction="row"
+				justify="center"
+				alignItems="center"
+				spacing={0}>
+				
+				{
+					isWidthUp('md', props.width) && 
+						<Grid className={'desktop-leftbar '+classes.left} item xs={2} >
+							<LeftNav />
+						</Grid> 
+				}
+
+				<Grid item xs={isWidthUp('md', props.width) ? 10 : 12} >
+					<b>BlinkMacSystemFont</b>
+				</Grid>
+
+			</Grid>
+
 			<style jsx global>
 				{`
 					html,
 					body {
 						padding: 0;
 						margin: 0;
-						background-color: black;
+						background-color: #353353;
 						color: white;
-						font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+						font-family: Rubik, sans-serif,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
 							Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
 							sans-serif;
 							overflow: hidden;
@@ -28,12 +62,21 @@ const Home = () => {
 					* {
 						box-sizing: border-box;
 					}
-					.bg-image {
-						
-						height: 300px;
-						width: 100%;
-						background-repeat: no-repeat;
-						background-image : url('/images/javascript.png')
+					.desktop-leftbar {
+						color: #fff;
+						background: #353353;
+						padding: 50px 0 0 20px;
+						overflow-y: auto;
+						overflow-x: hidden;
+						height: 100vh;
+						min-height: 100vh;
+						z-index: 1;
+						transform: translateX(0);
+						transition: all .3s ease-in-out;
+						transition-property: all;
+						transition-duration: 0.3s;
+						transition-timing-function: ease-in-out;
+						transition-delay: 0s;
 					}
 				`}
 			</style>
@@ -41,4 +84,4 @@ const Home = () => {
 	)
 }
 
-export default Home;
+export default withWidth()(Home);
