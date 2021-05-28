@@ -4,6 +4,7 @@ import LeftNav from '../components/home/left_nav';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import { useState } from 'react';
+import Home from '../components/home/home';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -37,14 +38,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 	mainDesktopOnly : {
 		position: 'relative',
-		display: 'flex',
 		height: '100vh',
 		marginLeft: 290,
 		transition : 'all 0.3s ease-in-out'
 	},
 	main : {
 		position: 'relative',
-		display: 'flex',
 		height: '100vh',
 		marginLeft: 0,
 		transition : 'all .3s ease-in-out'
@@ -52,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const Home = (props) => {
+const App = (props) => {
 	const classes = useStyles();
 	const [showLeftNav,setLeftNavVisibility] = useState(false);
 	
@@ -81,26 +80,33 @@ const Home = (props) => {
 				<LeftNav />
 			</Box> 
 
-			<header 
-				className={showLeftNav ? 
-					classes.mobileHeader +" "+ classes.shiftMobileHeader 
-					: classes.mobileHeader +" "+ classes.initXMobileHeader} 
-			>
-				<Box style={{  display: 'inline-flex!important'}}> 
-					<MenuRoundedIcon onClick={handleLeftNav} fontSize="large" />
-					<a style={{display: 'inline-block',fontSize: 35,marginLeft : 15}}>Bipul Mandol</a>
-				</Box>
-			</header>
+			{
+				isWidthUp('md', props.width) || 
+					<header 
+						className={ showLeftNav ? 
+							classes.mobileHeader +" "+ classes.shiftMobileHeader 
+							: classes.mobileHeader +" "+ classes.initXMobileHeader} 
+					>
+						<Box style={{  display: 'inline-flex!important'}}> 
+							<MenuRoundedIcon onClick={handleLeftNav} fontSize="large" />
+							<span variant="h3" style={{display: 'inline-block',fontSize:30 ,marginLeft : 15}}>Bipul Mandol</span> 
+						</Box>
+					</header>
+				
+			}
 
 			<Box  
 				onClick={onLeftNavOutsideClicked} 
-				className={isWidthUp('md', props.width) || showLeftNav ? classes.mainDesktopOnly :  classes.main }>
+				style={{display:'block'}}
+				className={isWidthUp('md', props.width) || showLeftNav ? classes.mainDesktopOnly :  classes.main }
+			>
+				<Home />
 			</Box>
 
 			<style jsx global>
 				{`
 					@import url('https://fonts.googleapis.com/css?family=Rubik');
-
+					@import url('https://fonts.googleapis.com/css?family=Sofia');
 					html,
 					body {
 						padding: 0;
@@ -164,4 +170,4 @@ const Home = (props) => {
 	)
 }
 
-export default withWidth()(Home);
+export default withWidth()(App);
