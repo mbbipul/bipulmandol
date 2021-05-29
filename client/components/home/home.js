@@ -36,17 +36,16 @@ const useStyles = makeStyles((theme) => ({
     root: {
         height: '100vh',
         width: '100%',
-        position: 'relative',
     },
     container: {
         display: 'flex',
         justifyContent: 'center',
         alignItem: 'center',
         // flexDirection: 'column',
-        position: 'absolute',
+        position: 'relative',
         left: '50%!important',
         top: '45%',
-        transform: 'translate(-50%, -50%)!important'
+        transform: 'translate(-50%, 45%)!important'
     },
     myImage : {
         width: 150,
@@ -108,7 +107,7 @@ export default function Home () {
                     </Grid>
                     <Grid item>
                         <ThemeProvider theme={theme}>
-                        <Typography variant='h3'>Bipul Mandol</Typography>
+                            <Typography variant='h3'>Bipul Mandol</Typography>
 
                         </ThemeProvider>
                     </Grid>

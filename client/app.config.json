@@ -1,13 +1,13 @@
 {
     "author" : "Bipul Mandol",
     "profileImageUrl" : "/images/bipul_profile.png",
+    "aboutProfileImageUrl" : "/images/bipul.png",
     "role": [
         "I'm a Software Engineer",
-        "I have experienced on Frontend Development",
-        "I have experienced on Desktop Software Development",
-        "I have experienced on Frontend Development",
         "I have experienced on Backend Development",
+        "I have experienced on Frontend Development",
         "I have experienced on Android App Development",
+        "I have experienced on Desktop Software Development",
         "I have experienced on IOT Development"
     ],
     "socialMediaUserId": {
@@ -15,5 +15,32 @@
         "linkedin": "bipul-mandol-10b157140",
         "facebook": "bb.bbbipul",
         "instragram": "bb_bipul"
-    }
+    },
+    "aboutSkill": [
+        {
+            "title": "Backend Development",
+            "skillInpercent": 85,
+            "barColor": "blue"
+        },
+        {
+            "title": "Frontend Development",
+            "skillInpercent": 70,
+            "barColor": "yellow"
+        },
+        {
+            "title": "Android App Development",
+            "skillInpercent": 80,
+            "barColor": "green"
+        },
+        {
+            "title": "Desktop Software Development",
+            "skillInpercent": 65,
+            "barColor": "purple"
+        },
+        {
+            "title": "IOT Development",
+            "skillInpercent": 65,
+            "barColor": "red"
+        }
+    ]
 }

@@ -1,10 +1,13 @@
-import {  Box, Grid, makeStyles, Typography } from '@material-ui/core';
+import {  Box, makeStyles } from '@material-ui/core';
 import Head from 'next/head';
 import LeftNav from '../components/home/left_nav';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import { useState } from 'react';
 import Home from '../components/home/home';
+import About from '../components/home/about';
+
+const leftMargin = 250;
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -18,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: 900	,
 	},
 	shiftMobileHeader : {
-		marginLeft: 290,
+		marginLeft: leftMargin,
 		transition : 'all 0.3s ease-in-out'
 	},
 	initXMobileHeader: {
@@ -37,13 +40,11 @@ const useStyles = makeStyles((theme) => ({
 		animationFillMode: "forwards"
 	},
 	mainDesktopOnly : {
-		position: 'relative',
 		height: '100vh',
-		marginLeft: 290,
+		marginLeft: leftMargin,
 		transition : 'all 0.3s ease-in-out'
 	},
 	main : {
-		position: 'relative',
 		height: '100vh',
 		marginLeft: 0,
 		transition : 'all .3s ease-in-out'
@@ -94,15 +95,20 @@ const App = (props) => {
 					</header>
 				
 			}
-
-			<Box  
-				onClick={onLeftNavOutsideClicked} 
-				style={{display:'block'}}
+			<Box 	
+				onClick={onLeftNavOutsideClicked} 				
 				className={isWidthUp('md', props.width) || showLeftNav ? classes.mainDesktopOnly :  classes.main }
 			>
-				<Home />
-			</Box>
+				<Box 
+					style={{height: '100vh'}}>
+					<Home />
+				</Box>
 
+				<Box>
+					<About />
+				</Box>
+			</Box>
+			
 			<style jsx global>
 				{`
 					@import url('https://fonts.googleapis.com/css?family=Rubik');
@@ -142,7 +148,7 @@ const App = (props) => {
 						height: 100vh;
 						min-height: 100vh;
 						z-index: 1;
-						width:290px
+						width:250px
 						
 					}
 					@keyframes inAnimationNav {
@@ -152,7 +158,7 @@ const App = (props) => {
 						}
 						100% {
 							visibility: visible;
-							width: 290px;
+							width: 250px;
 						}
 					}
 					
