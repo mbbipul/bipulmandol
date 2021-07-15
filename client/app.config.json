@@ -7,7 +7,7 @@
         "I have experienced on Backend Development",
         "I have experienced on Frontend Development",
         "I have experienced on Android App Development",
-        "I have experienced on Desktop Software Development",
+        "I have experienced on Native App Development",
         "I have experienced on IOT Development"
     ],
     "socialMediaUserId": {
@@ -33,14 +33,46 @@
             "barColor": "green"
         },
         {
-            "title": "Desktop Software Development",
-            "skillInpercent": 65,
+            "title": "Native App Development",
+            "skillInpercent": 50,
             "barColor": "purple"
         },
         {
             "title": "IOT Development",
             "skillInpercent": 65,
             "barColor": "red"
+        }
+    ],
+    "aboutServices": [
+        {
+            "title": "Backend Development",
+            "details": "I have been working with web development since 2017, the period during which I have worked on different projects. ",
+            "color": "#2196f3",
+            "image": "/images/backend_dev.jpg"
+        },
+        {
+            "title": "Frontend Development",
+            "details": "I have been working with web development since 2017, the period during which I have worked on different projects. ",
+            "color": "#ffeb3b",
+            "image": "/images/frontend_dev.jpg"
+        },
+        {
+            "title": "Android App Development",
+            "details": "I have been working with web development since 2017, the period during which I have worked on different projects. ",
+            "color": "#4caf50",
+            "image": "/images/android_app_dev.jpg"
+        },
+        {
+            "title": "Native App Development",
+            "details": "I have been working with web development since 2017, the period during which I have worked on different projects. ",
+            "color": "#9c27b0",
+            "image": "/images/native_app_dev.png"
+        },
+        {
+            "title": "IOT Development",
+            "details": "I have been working with web development since 2017, the period during which I have worked on different projects. ",
+            "color": "#f44336",
+            "image": "/images/iot_app_dev.jpg"
         }
     ]
 }

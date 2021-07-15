@@ -7,9 +7,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
-import { createMuiTheme, responsiveFontSizes,ThemeProvider, withStyles  } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes,ThemeProvider, withStyles  } from '@material-ui/core/styles';
 
-let theme = createMuiTheme();
+let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 const HireMe = withStyles((theme) => ({

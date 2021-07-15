@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Grid, makeStyles, Typography, withStyles } from "@material-ui/core";
+import { Avatar, Box, Button, Card, Grid, makeStyles, Typography, withStyles } from "@material-ui/core";
 import { purple,yellow,green,blue, red } from "@material-ui/core/colors";
 import appConfig from "../../app.config.json";
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -163,7 +163,20 @@ const useStyles = makeStyles((theme) => ({
             left: '15%'
         },
     },
-
+    experienceAbout: {
+        padding: 10,
+        width: 200,
+        borderRadius: 20,
+        fontSize: 18,
+        fontFamily: 'Rubik',
+        fontWeight: 900,
+        backgroundColor: yellow[400],
+        marginTop: -40,
+        // marginLeft: 100
+        'box-shadow': '2px 3px 3px 3px rgba(123,110,110,0.77)',
+        '-webkit-box-shadow': '2px 3px 3px 3px rgba(123,110,110,0.77)',
+        '-moz-box-shadow': '2px 3px 3px 3px rgba(123,110,110,0.77)'
+    }
 }));
 
 function About(props) {
@@ -174,7 +187,7 @@ function About(props) {
             <Typography
                 className={classes.title}
                 variant='h3'>About Me
-                </Typography>
+            </Typography>
            
             <Grid
                 container
@@ -185,8 +198,9 @@ function About(props) {
                 <Grid item xs={12} sm={5} md={5} lg={3}>
                     <Avatar className={classes.myImage} variant="square" alt={appConfig.author} src={appConfig.aboutProfileImageUrl} />
                 </Grid>
-                <Grid item xs={12} sm={7} md={7} lg={9}>
+                <Grid item xs={12} sm={7} md={7} lg={9}>              
                     <Box className={classes.aboutDetailsBox}>
+                        <Card boxShadow={3} className={classes.experienceAbout}>4 Years Experience</Card>
                         <Grid
                             container
                             direction="row"

@@ -6,6 +6,7 @@ import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import { useState } from 'react';
 import Home from '../components/home/home';
 import About from '../components/home/about';
+import Services from '../components/home/services';
 
 const leftMargin = 250;
 
@@ -65,7 +66,7 @@ const App = (props) => {
 			setLeftNavVisibility(!showLeftNav);
 		}
 	}
-
+		
 	return (
 		<Box className={classes.root}>
 		    <Head>
@@ -106,6 +107,7 @@ const App = (props) => {
 
 				<Box>
 					<About />
+					<Services />
 				</Box>
 			</Box>
 			
