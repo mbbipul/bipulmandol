@@ -1,13 +1,13 @@
 import {  Box, Grid, makeStyles, withWidth,Typography } from "@material-ui/core";
 import { blue, green, purple, red, yellow } from "@material-ui/core/colors";
-import Service from "../elements/service";
 import appConfig from "../../app.config.json";
+import Service from "../elements/service";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         marginLeft: 20,
         marginRight: 20,
-        marginTop: 50
+        marginTop: 50,
     },
     title: {
         fontSize: 36,
@@ -40,7 +40,7 @@ function Services() {
             >
                {
                     appConfig.aboutServices.map(({color,title,details,image},key) => (
-                        <Grid item key={key} lg={4} sm={4} xs={12} xl={4}>
+                        <Grid item key={key} lg={4} sm={6} xs={12} xl={4}>
                             <Service color={color} title={title} details={details} image={image} />
                         </Grid>
                     ))

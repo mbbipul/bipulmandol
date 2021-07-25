@@ -6,10 +6,14 @@ const useStyles = color => makeStyles((theme) => ({
     root: {
         backgroundColor: color,
         borderRadius: 20,
-    },
-    actionArea: {
-        // padding: 10 ,
-        // paddingTop: 20
+        'box-shadow': '2px 3px 3px 3px rgba(123,110,110,.5)',
+        '-webkit-box-shadow': '2px 3px 3px 3px rgba(123,110,110,.35)',
+        '-moz-box-shadow': '2px 3px 3px 3px rgba(123,110,110,.5)',
+        transition: 'transform 300ms ease-in-out 300ms',
+        '&:hover' : {
+            transform: 'translateY(-20px)',
+            transition: 'transform 300ms ease-in-out 300ms'
+        }
     },
     title: {
         fontSize: 18,
