@@ -74,5 +74,87 @@
             "color": "#f44336",
             "image": "/images/iot_app_dev.jpg"
         }
+    ],
+    "experiences": [
+        {
+            "employee" : "Multidimensional It Solution ",
+            "jobTitle": "Full Stack Developer - Part Time",
+            "joinDate" : "July 2018",
+            "toDate" : "May 2019",
+            "employeeRef" : "",
+            "responsibilities": [
+                "Work with development teams and product managers to ideate software solutions",
+                "Design easy user interfaces and great user experiences for the digital platforms of small companies",
+                "Design client-side and server-side architecture",
+                "Develop and manage well-functioning databases and applications",
+                "Integrate external services such as payment services, delivery, etc",
+                "Write effective APIs",
+                "Work with data scientists and analysts to improve software",
+                "Build features and applications with a mobile responsive design",
+                "VPS configuration and optimization (Apache & Nginx)",
+                "Work with docker ,kubernetes and cloud deployment"
+            ],
+            "testimonial": "",
+            "experience" : "I have been working with full-stack web development since 2017. I have developed many professional websites for my client. I have a team, we worked remotely together and developed websites for our clients."
+        },
+        {
+            "employee" : "Talking Glass",
+            "jobTitle": "Software Engineer",
+            "joinDate" : "Jan 2020",
+            "toDate" : "May 2021",
+            "employeeRef" : "",
+            "responsibilities": [
+                "Work with development teams and product managers to ideate software solutions",
+                "Develop an android and an Iot application ",
+                "Lead a team of 4 software and hardware engineers ",
+                "Design talkingglass software and hardware architecture",
+                "Design a smart glass for visually impaired people",
+                "Work with AI,ML",
+                "Work with IOT device",
+                "Deploy Deep learning model in edge device"
+            ],
+            "testimonial": "",
+            "experience" : "TalkingGlass is a local Startup Company funded by Government. My job here is to develop great digital solutions for visually impaired people to solve their problems."
+        },
+        {
+            "employee" : "Multidimensional It Solution ",
+            "jobTitle": "Full Stack Developer - Part Time",
+            "joinDate" : "July 2018",
+            "toDate" : "May 2019",
+            "employeeRef" : "",
+            "responsibilities": [
+                "Work with development teams and product managers to ideate software solutions",
+                "Design easy user interfaces and great user experiences for the digital platforms of small companies",
+                "Design client-side and server-side architecture",
+                "Develop and manage well-functioning databases and applications",
+                "Integrate external services such as payment services, delivery, etc",
+                "Write effective APIs",
+                "Work with data scientists and analysts to improve software",
+                "Build features and applications with a mobile responsive design",
+                "VPS configuration and optimization (Apache & Nginx)",
+                "Work with docker ,kubernetes and cloud deployment"
+            ],
+            "testimonial": "",
+            "experience" : "I have been working with full-stack web development since 2017. I have developed many professional websites for my client. I have a team, we worked remotely together and developed websites for our clients."
+        },
+        {
+            "employee" : "Talking Glass",
+            "jobTitle": "Software Engineer",
+            "joinDate" : "Jan 2020",
+            "toDate" : "May 2021",
+            "employeeRef" : "",
+            "responsibilities": [
+                "Work with development teams and product managers to ideate software solutions",
+                "Develop an android and an Iot application ",
+                "Lead a team of 4 software and hardware engineers ",
+                "Design talkingglass software and hardware architecture",
+                "Design a smart glass for visually impaired people",
+                "Work with AI,ML",
+                "Work with IOT device",
+                "Deploy Deep learning model in edge device"
+            ],
+            "testimonial": "",
+            "experience" : "TalkingGlass is a local Startup Company funded by Government. My job here is to develop great digital solutions for visually impaired people to solve their problems."
+        }
     ]
 }

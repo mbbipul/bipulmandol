@@ -3,10 +3,12 @@ import Head from 'next/head';
 import LeftNav from '../components/home/left_nav';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Home from '../components/home/home';
 import About from '../components/home/about';
 import Services from '../components/home/services';
+import Section from '../components/section';
+import Experiences from '../components/home/experiences';
 
 const leftMargin = 250;
 
@@ -66,7 +68,7 @@ const App = (props) => {
 			setLeftNavVisibility(!showLeftNav);
 		}
 	}
-		
+
 	return (
 		<Box className={classes.root}>
 		    <Head>
@@ -101,14 +103,16 @@ const App = (props) => {
 				className={isWidthUp('md', props.width) || showLeftNav ? classes.mainDesktopOnly :  classes.main }
 			>
 				<Box 
-					style={{height: '100vh'}}>
-					<Home />
-				</Box>
+						style={{height: '100vh'}}>
+						<Section id="Home" child={<Home />}/>
+					</Box>
 
-				<Box>
-					<About />
-					<Services />
-				</Box>
+					<Box>
+						<Section id="About" child={<About />}/>
+						<Section id="Services" child={<Services />}/>
+						<Section id="Experience" child={<Experiences />}/>
+
+					</Box>
 			</Box>
 			
 			<style jsx global>
@@ -126,6 +130,8 @@ const App = (props) => {
 							sans-serif;
 						overflow: scroll;
     					overflow-x: hidden;
+						scroll-behavior: smooth;
+						transition: scroll-behavior 10s;
 					}
 					::-webkit-scrollbar {
 						width: 0;  /* Remove scrollbar space */

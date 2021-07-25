@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 15,
         fontSize: 13,
         color: 'rgb(156, 154, 179)'
+    },
+    targetLink : {
+        textDecoration: 'none'
     }
 }));
 
@@ -39,12 +42,15 @@ export default function LeftNav() {
             <List component="nav" aria-label="main mailbox folders" className={classes.navList}>
                 {
                     leftNavItem.map( (item,i) => (
-                        <ListItem key={i} button className={classes.listItem}>
-                            <ListItemIcon>
-                                {item.icon}
-                            </ListItemIcon>
-                            <ListItemText primary={item.name} />
-                        </ListItem>
+                            <a href={"#"+item.name} class={classes.targetLink}>
+                                <ListItem key={i} button className={classes.listItem}>
+                                    <ListItemIcon>
+                                        {item.icon}
+                                    </ListItemIcon>
+                                    <ListItemText primary={item.name} />
+                                </ListItem>
+                            </a>
+                           
                     ))
                 }
             </List>
