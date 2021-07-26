@@ -9,6 +9,7 @@ import About from '../components/home/about';
 import Services from '../components/home/services';
 import Section from '../components/section';
 import Experiences from '../components/home/experiences';
+import Projects from '../components/home/projects';
 
 const leftMargin = 250;
 
@@ -89,7 +90,7 @@ const App = (props) => {
 					<header 
 						className={ showLeftNav ? 
 							classes.mobileHeader +" "+ classes.shiftMobileHeader 
-							: classes.mobileHeader +" "+ classes.initXMobileHeader} 
+							: classes.mobileHeader +" "+ classes.iniztXMobileHeader} 
 					>
 						<Box style={{  display: 'inline-flex!important'}}> 
 							<MenuRoundedIcon onClick={handleLeftNav} fontSize="large" />
@@ -111,7 +112,7 @@ const App = (props) => {
 						<Section id="About" child={<About />}/>
 						<Section id="Services" child={<Services />}/>
 						<Section id="Experience" child={<Experiences />}/>
-
+						<Section id="Projects" child={<Projects />}/>
 					</Box>
 			</Box>
 			
@@ -124,7 +125,7 @@ const App = (props) => {
 						padding: 0;
 						margin: 0;
 						background-color: #353353;
-						color: white;
+						color: #CCD6F6;
 						font-family: Rubik, sans-serif,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
 							Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
 							sans-serif;
