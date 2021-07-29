@@ -1,4 +1,4 @@
-import {  Box, makeStyles, withWidth,Typography } from "@material-ui/core";
+import {  Box, makeStyles, withWidth,Typography, Paper, Grid, Button } from "@material-ui/core";
 import Project from "../elements/project";
 
 const useStyles = makeStyles((theme) => ({
@@ -12,45 +12,13 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 700,
         fontFamily: 'Rubik'
     },
-    techList : {
-        padding: 0,
-        marginTop:20,
-        "& span": {
-            marginLeft: 10,
-            color:"#9DA8C7"
-        }
-    },
-    projectTitle: {
-        fontSize: 31,
-        fontWeight: 600,
-    },
-    projectType:{
-        fontSize: 17,
-        fontWeight: 400,
-        color: "#5FF1D0"
-    },
-    projectAnchor: {
-        color: "#ccd6f6",
-        textDecoration: "none",
-        "&:hover" : {
-            color: "#61F9D5"
-        }
-    },
-    projectAnchorBox: {
-        marginTop: 20,
-        "& a": {
-            marginLeft: 10,
-            fontSize: 20,
-            fontWeight: 400
-        }
-    },
-    projectDetails: {
-        borderRadius: 10,
-        marginTop:20,
-        padding:30,
-        marginLeft:-150,
-        backgroundColor: "#112240",
-        color:"#9DA8C7"
+    othersProjecttitle: {
+        margin: 50,
+        marginTop: 80,
+        fontSize: 26,
+        fontWeight: 700,
+        fontFamily: 'Rubik',
+        textAlign: 'center'
     },
 
 }));
@@ -65,14 +33,41 @@ function Projects() {
     }
     return (
         <Box className={classes.root}>
-            <Typography
-                className={classes.title}
-                variant='h3'>
-                Projects
-            </Typography>
-           {
-               Array(6).fill(0).map((v,i) => <Project leftAlign={getReverseLestAlign()} />)
-           }
+            <Box>
+                <Typography
+                    className={classes.title}
+                    variant='h3'>
+                    Projects
+                </Typography>
+            {
+                Array(6).fill(0).map((v,i) => <Project leftAlign={getReverseLestAlign()} />)
+            }
+            </Box>
+
+            <Box>
+                <Typography
+                    className={classes.othersProjecttitle}>
+                    Other Projects
+                </Typography>
+                <Grid
+                    container
+                    direction="row"
+                    justify="flex-start"
+                    alignItems="flex-start"
+                    spacing={3}
+                    >
+
+                    {
+                        Array(12).fill(1).map((v,i) => (
+                            <Grid item lg={4}  md={6} sm={6} xs={12}>
+                                <Project type="others"/>
+                            </Grid>
+                        ))
+                    }
+                </Grid>
+                {/* <Button variant="contained" color="secondary">More</Button> */}
+            </Box>
+           
         </Box>
     )
 }

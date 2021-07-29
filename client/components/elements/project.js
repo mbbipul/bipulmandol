@@ -2,6 +2,12 @@ import {  Box, Grid, makeStyles, withWidth,Typography, Paper } from "@material-u
 import PaperWithImage from "../elements/paperWithBg";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LaunchRoundedIcon from '@material-ui/icons/LaunchRounded';
+import CodeOutlinedIcon from '@material-ui/icons/CodeOutlined';
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
+import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,7 +23,23 @@ const useStyles = makeStyles((theme) => ({
         marginTop:20,
         "& span": {
             marginLeft: 10,
-            color:"#9DA8C7"
+            color:"#9DA8C7",
+        },
+        "& span:not(:last-child)" :{
+            borderRight: '2px solid #9DA4A9',
+            paddingRight: 10,
+        }
+    },
+    otherProjectstechList : {
+        padding: 0,
+        marginTop:20,
+        "& span": {
+            marginLeft: 10,
+            color:"#9DA8C7",
+        },
+        "& span:not(:nth-last-child(-n+2))" :{
+            borderRight: '2px solid #9DA4A9',
+            paddingRight: 10,
         }
     },
     projectTitle: {
@@ -37,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
         color: "#ccd6f6",
         textDecoration: "none",
         "&:hover" : {
-            color: "#61F9D5"
+            color: "#61F9D5",
         }
     },
     projectAnchorBox: {
@@ -63,6 +85,26 @@ const useStyles = makeStyles((theme) => ({
         marginRight:-150,
         backgroundColor: "#112240",
         color:"#9DA8C7"
+    },
+    otherProjectPaper: {
+        borderRadius: 10,
+        marginTop:20,
+        padding:30,
+        backgroundColor: "#112240",
+        color:"#9DA8C7",
+        transition: 'transform 1s ',
+        '&:hover' : { 
+            transform: 'translateY(-20px)',
+            transition: 'transform 1s ',
+
+        }
+    },
+    otherProjectInfoBox: {
+        marginTop: 20,
+    },
+    otherProjectInfoTitle:{
+        marginBottom: 20,
+        color: "#5FEEC8",
     },
 
 }));
@@ -156,7 +198,40 @@ function ProjectRight() {
     )
 }
 
-function Project({leftAlign}){
+const OtherProjectsCard = () => {
+    const classes = useStyles();
+
+    return (
+        <Paper elevation={9} className={classes.otherProjectPaper+" ripple"} >
+            <Box>
+                <span className={classes.projectAnchor}>
+                    <a href="#" target="_blank" className={classes.projectAnchor}><CodeOutlinedIcon /></a>
+                </span>
+                <span className={classes.projectAnchor} style={{float:"right"}}>
+                    <a href="#" target="_blank" className={classes.projectAnchor}><LaunchRoundedIcon /></a>
+                </span>
+            </Box>
+            <Box className={classes.otherProjectInfoBox}>
+                <ThemeProvider theme={theme}>
+                    <Typography variant="h5" className={classes.otherProjectInfoTitle}>Integrating Algolia Search with WordPress Multisite</Typography>
+
+                </ThemeProvider>
+                <Typography>A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.</Typography>
+            </Box>
+
+            <Box className={classes.otherProjectstechList} style={{textAlign: 'right'}}>
+                <span>Node js</span>
+                <span>Mongodb</span>
+                <span>React js</span>
+                <span style={{cursor: 'pointer'}}>....</span>
+            </Box>
+        </Paper>
+    )
+}
+
+function Project({leftAlign,type}){
+    if (type === "others")
+        return <OtherProjectsCard />
     if (leftAlign === true) 
         return <ProjectLeft />
     return <ProjectRight />

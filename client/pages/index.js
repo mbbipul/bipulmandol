@@ -160,6 +160,20 @@ const App = (props) => {
 						width:250px
 						
 					}
+					.ripple {
+						background-position: center;
+						transition: background 300ms;
+						cursor: pointer
+					}
+					.ripple:hover {
+						background: #112240 radial-gradient(circle, transparent 1%, #353353 1%) center/15000%;
+					}
+					.ripple:active {
+						background-color: #353353;
+						background-size: 100%;
+						transition: background 0s;
+					}
+
 					@keyframes inAnimationNav {
 						0% {
 							visibility: hidden;
