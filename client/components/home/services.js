@@ -1,5 +1,4 @@
 import {  Box, Grid, makeStyles, withWidth,Typography } from "@material-ui/core";
-import { blue, green, purple, red, yellow } from "@material-ui/core/colors";
 import appConfig from "../../app.config.json";
 import Service from "../elements/service";
 

@@ -10,6 +10,7 @@ import Services from '../components/home/services';
 import Section from '../components/section';
 import Experiences from '../components/home/experiences';
 import Projects from '../components/home/projects';
+import Skills from '../components/home/skills';
 
 const leftMargin = 250;
 
@@ -113,6 +114,7 @@ const App = (props) => {
 						<Section id="Services" child={<Services />}/>
 						<Section id="Experience" child={<Experiences />}/>
 						<Section id="Projects" child={<Projects />}/>
+						<Section id="Skills" child={<Skills />}/>
 					</Box>
 			</Box>
 			
